@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/linearLayoutF1"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backgrounditem"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/linearF1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp">
+
+        <ImageView
+            android:id="@+id/baskinlogoF"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:src="@drawable/baskinlogo1"/>
+
+     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayoutF4"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp"
+        android:padding="20dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:gravity="center_vertical"
+            android:inputType="textWebPassword"
+            android:imeOptions="actionNext"
+            android:drawablePadding="10dp"
+            android:id="@+id/editTextF1" 
+            android:background="@drawable/shape_rectangle"
+            android:hint="Enter Password"
+            android:drawableRight="@drawable/ic_visibilityoff"/>
+
+    
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="10dp"
+            android:inputType="textWebPassword"
+            android:imeOptions="actionNext"
+            android:gravity="center_vertical"
+            android:id="@+id/editTextF2" 
+            android:background="@drawable/shape_rectangle"
+            android:hint="Enter New Password"
+            android:drawableRight="@drawable/ic_visibilityoff"/>
+
+           <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="10dp"
+            android:inputType="number"
+            android:imeOptions="actionNext"
+            android:gravity="center_vertical"
+            android:id="@+id/editTextF3" 
+            android:background="@drawable/shape_rectangle"
+            android:hint="Enter OTP"/>
+
+         <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Click Here for OTP"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="15dp"
+                android:textSize="16dp"
+                android:layout_gravity="center"
+                android:id="@+id/genrateOTP"
+                android:textStyle="bold"
+                android:gravity="right"
+                android:textColor="#3d3d3d"/>
+
+    
+
+    </LinearLayout>
+
+
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:text="Confirm"
+        android:textAllCaps="false"
+        android:layout_marginTop="40dp"
+        android:textSize="20dp"
+        android:layout_gravity="center"
+        android:background="@drawable/buttonshape"
+        android:id="@+id/confirmbutton"
+        android:textColor="#ffffff"/>
+
+
+       
+ 
+</LinearLayout>
+       
+
+
+
+
+
+
+
+
+   
+
+
