@@ -1,6 +1,7 @@
 ﻿using Android.App;
 using Android.Content;
 using Android.Graphics;
+using Android.Graphics.Drawables;
 using Android.OS;
 using Android.Runtime;
 using Android.Text;
@@ -11,6 +12,7 @@ using System.Collections.Generic;
 
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace LoginRegisterForm
 {
@@ -27,6 +29,9 @@ namespace LoginRegisterForm
         private Button _resgister;
         private ImageView _myRfacebook;
         private ImageView _myRgoogle;
+        private Regex username = new Regex("^[a-z-A-Z]*$");
+        private Regex email = new Regex(@"^[a-z]([\w]*[\w\.]*(?!\.)@gmail.com)");
+        private Drawable errorIcon;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -54,20 +59,121 @@ namespace LoginRegisterForm
 
         private void _resgister_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(_myRusername.Text) || string.IsNullOrEmpty(_myRemailaddress.Text) || string.IsNullOrEmpty(_myRusernameedts.Text) || string.IsNullOrEmpty(_myRpassword.Text))
-            {
-                Toast.MakeText(this, "Enter details", ToastLength.Short).Show();
-             
-            }
 
-            else
-            {
-
-                Toast.MakeText(this, "Registeration Sucessfull", ToastLength.Short).Show();
-               
-                Finish();
-            }
            
+            if (myuserfill() && myemailfill() && myusernamefill() && mypasswordfill())
+            {
+                Toast.MakeText(this, "Registeration Sucessfull", ToastLength.Short).Show();
+
+                Finish();
+
+            }
+
+            
+           
+        }
+
+        private bool mypasswordfill()
+        {
+            
+            if (_myRpassword.Text.Length == 0)
+            {
+            
+                _myRpassword.Error = "Enter Password";
+                return false;
+
+            
+            }
+            else if (_myRpassword.Text.Length < 8)
+            {
+
+
+                _myRpassword.Error = "Minimum length of  password should be 8";
+                return false;
+            }
+
+            return true;
+        }
+
+        private bool myusernamefill()
+        {
+            
+            if(_myRusernameedts.Text.Length == 0)
+            {
+
+                _myRusernameedts.Error = "Enter Username";
+                _myRusernameedts.RequestFocus();
+                
+                return false;
+            }
+            else if(!isValiduser(_myRusernameedts.Text))
+            {
+
+                _myRusernameedts.Error = "Numbers are not allowed";
+                _myRusernameedts.RequestFocus();
+                return false;
+            }
+
+            return true;
+        }
+
+        private bool myemailfill()
+        {
+            
+            if (_myRemailaddress.Text.Length == 0)
+            {
+
+                _myRemailaddress.Error = "Enter Email Address";
+           
+                return false;
+
+            }
+            else if (!isValidemail(_myRemailaddress.Text))
+            {
+               _myRemailaddress.Error= "Entered email address is not valid";
+               
+                return false;
+
+            }
+            return true;
+        }
+
+        private bool isValidemail(string text)
+        {
+            if (string.IsNullOrEmpty(text))
+                return false;
+
+            return email.IsMatch(text);
+        }
+
+        private bool myuserfill()
+        {
+            
+            if (_myRusername.Text.Length == 0)
+            {
+
+                _myRusername.Error= "Enter User Name";
+               
+                return false;
+
+            }
+            else if (!isValiduser(_myRusername.Text))
+            {
+                _myRusername.Error= "Numbers are not allowed";
+              
+                return false;
+
+            }
+            return true;
+        }
+
+        private bool isValiduser(string text)
+        {
+            if (string.IsNullOrEmpty(text))
+
+                return false;
+
+            return username.IsMatch(text);
         }
 
         private void UIReference()
@@ -93,9 +199,12 @@ namespace LoginRegisterForm
 
 
 
-                    Color.ParseColor("#000060"),
-                    Color.ParseColor("#000060"),
-                    Color.ParseColor("#209FF1"),
+
+
+                    Color.ParseColor("#002aba"),
+                    Color.ParseColor("#002aba"),
+                    Color.ParseColor("#f23ce7"),
+
 
 
 

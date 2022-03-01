@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:id="@+id/linearLayout1"
@@ -22,6 +22,7 @@
             android:id="@+id/textlogin"
             android:text="Login"
             android:textSize="50dp"
+            android:textColor="#000060"
             android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
@@ -60,8 +61,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout4"
         android:orientation="vertical"
-        android:layout_marginTop="60dp"
-        android:padding="10dp">
+        android:layout_marginTop="65dp">
 
         <EditText
             android:layout_width="match_parent"
@@ -70,43 +70,50 @@
             android:gravity="center_vertical"
             android:inputType="textWebEditText"
             android:imeOptions="actionNext"
+            android:paddingHorizontal="10dp"
             android:drawablePadding="15dp"
             android:id="@+id/editText1"
             android:background="@drawable/shape_rectangle"
             android:hint="Enter Username"
             android:drawableLeft="@drawable/ic_user"/>
+     
 
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_margin="10dp"
-            android:drawablePadding="15dp"
-            android:layout_marginTop="10dp"
-            android:inputType="textWebPassword"
-            android:imeOptions="actionNext"
-            android:gravity="center_vertical"
-            android:id="@+id/editText2"
-            android:background="@drawable/shape_rectangle"
-            android:hint="Enter Password"
-            android:drawableLeft="@drawable/ic_password"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:drawablePadding="15dp"
+                android:paddingHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:inputType="textWebPassword"
+                android:imeOptions="actionDone"
+                android:gravity="center_vertical"
+                android:id="@+id/editText2"
+                android:background="@drawable/shape_rectangle"
+                android:hint="Enter Password"
+                android:drawableLeft="@drawable/ic_password"/>
+        
+
+
+     
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Forgot password ?"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="3dp"
             android:layout_marginRight="15dp"
             android:textSize="17dp"
             android:id="@+id/forgotpass"
             android:gravity="right"
-            android:textColor="#3d3d3d"/>
+            android:textColor="@drawable/textselector"/>
 
     </LinearLayout>
 
     <Button
-        android:layout_width="200dp"
-        android:layout_height="40dp"
+         android:layout_width="250dp"
+        android:layout_height="45dp"
         android:text="Login"
         android:textAllCaps="false"
         android:layout_marginTop="40dp"

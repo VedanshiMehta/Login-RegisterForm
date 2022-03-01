@@ -1,12 +1,14 @@
 ﻿using Android.App;
 using Android.Content;
 using Android.Graphics;
+using Android.Graphics.Drawables;
 using Android.OS;
 using Android.Runtime;
 using Android.Text;
 using Android.Widget;
 using AndroidX.AppCompat.App;
 using System;
+using System.Text.RegularExpressions;
 
 namespace LoginRegisterForm
 {
@@ -22,6 +24,9 @@ namespace LoginRegisterForm
         private TextView _forgetpassword;
         private ImageView _myfacebook;
         private ImageView _mygoogle;
+        private Drawable errorIcon;
+        private Regex username = new Regex("^[a-z-A-Z]*$");
+     
 
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -32,6 +37,8 @@ namespace LoginRegisterForm
             SetContentView(Resource.Layout.activity_main);
             UIReference();
             UIClickEvent();
+
+           
         }
 
         private void UIClickEvent()
@@ -62,16 +69,73 @@ namespace LoginRegisterForm
 
         private void _mylogin_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(_myusernameedts.Text) || string.IsNullOrEmpty(_mypassword.Text))
-            {
-                Toast.MakeText(this, "Enter details", ToastLength.Short).Show();
-            }
-            else
+
+           
+             if (usernamefill() && passwordfill())
             {
                 Toast.MakeText(this, "Loggedin Sucessfull", ToastLength.Short).Show();
+            }
+          
+            
+        }
 
+      
+
+        private bool passwordfill()
+        {
+
+           
+            if (_mypassword.Text.Length == 0)
+            {
+                
+                _mypassword.Error = "Enter Password";
+                return false;
+            }
+
+            else if (_mypassword.Text.Length < 8)
+            {
+
+             
+                _mypassword.Error = "Minimum length of  password should be 8";
+                return false;
+            }
+
+            return true;
+
+        }
+
+
+
+        private bool usernamefill()
+        {
+            
+            
+            if (_myusernameedts.Text.Length == 0)
+            {
+               
+                _myusernameedts.Error = "Enter Username";
+                return false;
                 
             }
+            else if(!isValidateUsername(_myusernameedts.Text))
+
+            {
+                _myusernameedts.Error = "Numbers are not allowed";
+                return false;
+            }
+            return true;
+
+        }
+
+        private bool isValidateUsername(string text)
+        {
+            if (string.IsNullOrEmpty(text))
+            
+                return false;
+            
+
+                return username.IsMatch(text);
+            
         }
 
         private void _mycreateacc_Click(object sender, EventArgs e)
@@ -95,21 +159,20 @@ namespace LoginRegisterForm
             TextPaint paint = _mylogin.Paint;
             float width = paint.MeasureText(_mylogin.Text);
 
-            int[] vs = new int[] {
+            int[] vs = new int[]{
 
 
 
-                    Color.ParseColor("#000060"),
-                    Color.ParseColor("#000060"),
-                    Color.ParseColor("#209FF1"),
+                   
+                    Color.ParseColor("#002aba"),
+                    Color.ParseColor("#002aba"),
+                    Color.ParseColor("#f23ce7"),
 
 
-
-            };
-
-            Shader textshade = new LinearGradient(0 , 150, width, _mylogin.TextSize, vs, null, Shader.TileMode.Clamp);
-            _mylogin.Paint.SetShader(textshade);
-            
+                    };
+            Shader textShader = new LinearGradient(0, 150 , width, _mylogin.TextSize,
+                    vs, null, Shader.TileMode.Clamp);
+            _mylogin.Paint.SetShader(textShader);
 
         }
 

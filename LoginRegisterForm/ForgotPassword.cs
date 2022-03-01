@@ -53,6 +53,7 @@ namespace LoginRegisterForm
             {
 
                 Toast.MakeText(this, "Password Changed Sucessfully", ToastLength.Short).Show();
+                Finish();
 
             }
         }

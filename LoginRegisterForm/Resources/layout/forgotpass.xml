@@ -37,6 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_margin="10dp"
+            android:paddingHorizontal="15dp"
             android:gravity="center_vertical"
             android:inputType="textWebPassword"
             android:imeOptions="actionNext"
@@ -53,6 +54,7 @@
             android:layout_margin="10dp"
             android:layout_marginTop="20dp"
             android:drawablePadding="10dp"
+            android:paddingHorizontal="15dp"
             android:inputType="textWebPassword"
             android:imeOptions="actionNext"
             android:gravity="center_vertical"
@@ -66,9 +68,10 @@
             android:layout_height="60dp"
             android:layout_margin="10dp"
             android:layout_marginTop="20dp"
+            android:paddingHorizontal="15dp"
             android:drawablePadding="10dp"
             android:inputType="number"
-            android:imeOptions="actionNext"
+            android:imeOptions="actionDone"
             android:gravity="center_vertical"
             android:id="@+id/editTextF3" 
             android:background="@drawable/shape_rectangle"
@@ -85,7 +88,7 @@
                 android:id="@+id/genrateOTP"
                 android:textStyle="bold"
                 android:gravity="right"
-                android:textColor="#3d3d3d"/>
+                android:textColor="@drawable/textselector"/>
 
     
 
@@ -94,8 +97,8 @@
 
 
     <Button
-        android:layout_width="200dp"
-        android:layout_height="40dp"
+        android:layout_width="250dp"
+        android:layout_height="45dp"
         android:text="Confirm"
         android:textAllCaps="false"
         android:layout_marginTop="40dp"
