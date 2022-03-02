@@ -8,45 +8,40 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/backgrounditem"
-    android:padding="10dp">
+    android:padding="@dimen/my_paddingtext">
 
 
 
     <ImageView
         android:id="@+id/baskinlogoF"
-        android:layout_marginTop="50dp"
-        android:layout_width="150dp"
-        android:layout_height="100dp"
+        android:layout_marginTop="@dimen/my_margintoplogintext"
+        android:layout_width="@dimen/my_baskinimagewidth"
+        android:layout_height="@dimen/my_baskinimageheight"
         android:src="@drawable/baskinlogo1" />
 
-   
-
-    
-
-        <EditText
+    <EditText
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="80dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="10dp"
-            android:paddingHorizontal="15dp"
+            android:layout_height="@dimen/my_heightlayoutedt"
+            android:layout_marginTop="@dimen/my_marginTopFedt"
+            android:layout_marginLeft="@dimen/my_margintext"
+            android:layout_marginRight="@dimen/my_margintext"
+            android:layout_marginBottom="@dimen/my_margintext"
+            android:paddingHorizontal="@dimen/my_drawablepaddingedt"
             android:gravity="center_vertical"
             android:inputType="textWebPassword"
             android:imeOptions="actionNext"
-            android:drawablePadding="10dp"
+            android:drawablePadding="@dimen/my_drawablepaddingedt"
             android:id="@+id/passwordF" 
             android:background="@drawable/shape_rectangle"
             android:hint="@string/password"
             android:drawableRight="@drawable/ic_visibilityoff"/>
 
-    
-        <EditText
+    <EditText
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_margin="10dp"
-            android:drawablePadding="10dp"
-            android:paddingHorizontal="15dp"
+            android:layout_height="@dimen/my_heightlayoutedt"
+            android:layout_margin="@dimen/my_margintext"
+            android:drawablePadding="@dimen/my_drawablepaddingedt"
+            android:paddingHorizontal="@dimen/my_drawablepaddingedt"
             android:inputType="textWebPassword"
             android:imeOptions="actionNext"
             android:gravity="center_vertical"
@@ -55,12 +50,12 @@
             android:hint="@string/newpassword"
             android:drawableRight="@drawable/ic_visibilityoff"/>
 
-        <EditText
+    <EditText
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_margin="10dp"
-            android:paddingHorizontal="15dp"
-            android:drawablePadding="10dp"
+            android:layout_height="@dimen/my_heightlayoutedt"
+            android:layout_margin="@dimen/my_margintext"
+            android:paddingHorizontal="@dimen/my_drawablepaddingedt"
+            android:drawablePadding="@dimen/my_drawablepaddingedt"
             android:inputType="number"
             android:imeOptions="actionDone"
             android:gravity="center_vertical"
@@ -76,9 +71,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/sendotp"
-        android:layout_marginTop="2dp"
-        android:layout_marginRight="15dp"
-        android:textSize="16sp"
+        android:layout_marginTop="@dimen/my_margintopforgotpass"
+        android:layout_marginRight="@dimen/my_margingrightCreateOTP"
+        android:textSize="@dimen/my_textsize"
         android:layout_gravity="center"
         android:id="@+id/genrateOTPF"
         android:textStyle="bold"
@@ -89,12 +84,12 @@
 
     <Button
         
-        android:layout_width="220dp"
-        android:layout_height="45dp"
+        android:layout_width="@dimen/my_buttonwidthlayout"
+        android:layout_height="@dimen/my_buttonheightlayout"
         android:text="@string/confirm"
         android:textAllCaps="false"
-        android:layout_marginTop="40dp"
-        android:textSize="20dp"
+        android:layout_marginTop="@dimen/my_marginTopbutton"
+        android:textSize="@dimen/my_buttontextsize"
         android:layout_gravity="center"
         android:background="@drawable/buttonshape"
         android:id="@+id/confirmbF"

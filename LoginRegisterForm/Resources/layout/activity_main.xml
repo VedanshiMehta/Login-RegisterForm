@@ -8,16 +8,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/backgrounditem"
-    android:padding="20dp">
+    android:padding="@dimen/my_paddingvalue">
 
   
 
         <TextView
             android:id="@+id/textlogin"
             android:text="@string/login"
-            android:layout_marginTop="50dp"
-            android:padding="10dp"
-            android:textSize="50sp"
+            android:layout_marginTop="@dimen/my_margintoplogintext"
+            android:padding="@dimen/my_paddingtext"
+            android:textSize="@dimen/my_logintextsize"
             android:textColor="@color/my_darkblue"
             android:textStyle="bold"
             android:layout_width="match_parent"
@@ -26,14 +26,14 @@
         <LinearLayout
             android:id="@+id/linearLayout2"
             android:orientation="horizontal"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="@dimen/my_margintext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/accountquestiontextL"
                 android:text="@string/accquestion"
-                android:textSize="16sp"
+                android:textSize="@dimen/my_textsize"
                 android:textColor="@color/my_darkgray"
                 android:fontFamily="sans-serif"
                 android:layout_width="wrap_content"
@@ -42,8 +42,8 @@
             <TextView
                 android:id="@+id/createaccounttextL"
                 android:text="@string/createaccount"
-                android:layout_marginLeft="5dp"
-                android:textSize="17sp"
+                android:layout_marginLeft="@dimen/my_margincatext"
+                android:textSize="@dimen/my_catextsize"
                 android:textStyle="bold"
                 android:fontFamily="sans-serif"
                 android:textColor="@color/my_lightpink"
@@ -51,63 +51,58 @@
                 android:layout_height="wrap_content"/>
 
         </LinearLayout>
-    
-
-
-            <EditText
+        
+        <EditText
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginTop="90dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="10dp"
+                android:layout_height="@dimen/my_heightlayoutedt"
+                android:layout_marginTop="@dimen/my_marginTopedt"
+                android:layout_marginLeft="@dimen/my_margintext"
+                android:layout_marginRight="@dimen/my_margintext"
+                android:layout_marginBottom="@dimen/my_margintext"
                 android:gravity="center_vertical"
-                android:inputType="textWebEditText"
+                android:inputType="text"
                 android:imeOptions="actionNext"
-                android:paddingHorizontal="10dp"
-                android:drawablePadding="15dp"
+                android:paddingHorizontal="@dimen/my_paddingtext"
+                android:drawablePadding="@dimen/my_drawablepaddingedt"
                 android:id="@+id/usernameedtL"
                 android:background="@drawable/shape_rectangle"
                 android:hint="@string/username"
                 android:drawableLeft="@drawable/ic_user"/>
-     
-
-
-            <EditText
+        
+        <EditText
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_margin="10dp"
-                android:drawablePadding="15dp"
-                android:paddingHorizontal="10dp"
-                android:layout_marginTop="10dp"
-                android:inputType="textWebPassword"
+                android:layout_height="@dimen/my_heightlayoutedt"
+                android:layout_margin="@dimen/my_margintext"
+                android:drawablePadding="@dimen/my_margintext"
+                android:paddingHorizontal="@dimen/my_paddingtext"
+                android:layout_marginTop="@dimen/my_margintext"
+                android:inputType="textPassword"
                 android:imeOptions="actionDone"
                 android:gravity="center_vertical"
                 android:id="@+id/passwordedtL"
                 android:background="@drawable/shape_rectangle"
                 android:hint="@string/password"
                 android:drawableLeft="@drawable/ic_password"/>
- 
-       
     
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/forgotpassword"
-            android:layout_marginTop="3dp"
-            android:layout_marginRight="15dp"
-            android:textSize="17sp"
+            android:layout_marginTop="@dimen/my_margintopforgotpass"
+            android:layout_marginRight="@dimen/my_marginrightforgotpass"
+            android:textSize="@dimen/my_catextsize"
             android:id="@+id/forgotpasstextL"
             android:gravity="right"
             android:textColor="@drawable/textselector"/>
 
         <Button
-            android:layout_width="220dp"
-            android:layout_height="45dp"
+            android:layout_width="@dimen/my_buttonwidthlayout"
+            android:layout_height="@dimen/my_buttonheightlayout"
             android:text="@string/login"
             android:textAllCaps="false"
-            android:layout_marginTop="40dp"
-            android:textSize="20sp"
+            android:layout_marginTop="@dimen/my_marginTopbutton"
+            android:textSize="@dimen/my_buttontextsize"
             android:layout_gravity="center"
             android:background="@drawable/buttonshape"
             android:id="@+id/loginbuttonL"
@@ -117,9 +112,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/loginoption"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="@dimen/my_marginTopbutton"
             android:gravity=" center"
-            android:textSize="16sp"
+            android:textSize="@dimen/my_textsize"
             android:textStyle="bold"
             android:id="@+id/loginoptionL"
             android:textColor="@color/my_darkgray"/>
@@ -131,20 +126,20 @@
             android:orientation="horizontal"
             android:id="@+id/linearLayout4"
             android:gravity="center"
-            android:layout_marginTop="10dp"
-            android:padding="10dp">
+            android:layout_marginTop="@dimen/my_margintext"
+            android:padding="@dimen/my_paddingtext">
 
             <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="@dimen/my_imageSize"
+                android:layout_height="@dimen/my_imageSize"
                 android:id="@+id/facebookIL"
                 android:src="@drawable/facebook"/>
 
             <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="@dimen/my_imageSize"
+                android:layout_height="@dimen/my_imageSize"
                 android:id="@+id/googleIL"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="@dimen/my_margingLeftImage"
                 android:src="@drawable/google1"/>
 
 

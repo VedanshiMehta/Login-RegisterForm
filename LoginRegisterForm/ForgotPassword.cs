@@ -45,11 +45,6 @@ namespace LoginRegisterForm
 
 
             }
-            else if (passwordfill() != newpasswordfill())
-            {
-
-                Toast.MakeText(this, "New Password doesn't match with current password", ToastLength.Short).Show();
-            }
             else
             {
 
@@ -89,6 +84,13 @@ namespace LoginRegisterForm
             {
 
                 _myFnewpassword.Error = "Invalid Password";
+                return false;
+
+            }
+            else if (_myFnewpassword.Text != _myFpassword.Text)
+            {
+
+                _myFnewpassword.Error = "New password should match your old password";
                 return false;
 
             }

@@ -8,10 +8,10 @@
 	android:startColor="@color/my_backgroundpink"
 	android:endColor="@color/my_white"/>
 
-	<padding android:left="5dp"
-	  android:right="5dp"
-	  android:top="5dp"
-	  android:bottom="5dp" />
+	<padding android:left="@dimen/my_paddingshape"
+	  android:right="@dimen/my_paddingshape"
+	  android:top="@dimen/my_paddingshape"
+	  android:bottom="@dimen/my_paddingshape" />
 
 
 	
