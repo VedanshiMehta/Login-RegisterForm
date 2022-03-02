@@ -1,65 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:id="@+id/linearLayoutF1"
+    android:id="@+id/linearLayoutForgotPassword"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/backgrounditem"
-    android:padding="@dimen/my_paddingtext">
+    android:padding="@dimen/size20">
 
 
 
     <ImageView
-        android:id="@+id/imageviewbaskinlogoF"
-        android:layout_marginTop="@dimen/my_margintoplogintext"
-        android:layout_width="@dimen/my_baskinimagewidth"
-        android:layout_height="@dimen/my_baskinimageheight"
+        android:id="@+id/imageViewBaskinLogo"
+        android:layout_marginTop="@dimen/size50"
+        android:layout_width="@dimen/size150"
+        android:layout_height="@dimen/size100"
         android:src="@drawable/baskinlogo1" />
 
-    <EditText
+
+        <EditText
+            
+            android:layout_marginTop="@dimen/size80"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/my_heightlayoutedt"
-            android:layout_marginTop="@dimen/my_marginTopFedt"
-            android:layout_marginLeft="@dimen/my_margintext"
-            android:layout_marginRight="@dimen/my_margintext"
-            android:layout_marginBottom="@dimen/my_margintext"
-            android:paddingHorizontal="@dimen/my_drawablepaddingedt"
+            android:layout_height="@dimen/size60"
+            android:paddingHorizontal="@dimen/size15"
             android:gravity="center_vertical"
             android:inputType="textPassword"
             android:imeOptions="actionNext"
-            android:drawablePadding="@dimen/my_drawablepaddingedt"
-            android:id="@+id/edittextpasswordF" 
+            android:drawablePadding="@dimen/size15"
+            android:id="@+id/editTextNewPassword" 
             android:background="@drawable/shape_rectangle"
-            android:hint="@string/password"
+            android:hint="@string/newPassword"
             android:drawableRight="@drawable/ic_visibilityoff"/>
 
-    <EditText
+    
+
+        <EditText
             android:layout_width="match_parent"
-            android:layout_height="@dimen/my_heightlayoutedt"
-            android:layout_margin="@dimen/my_margintext"
-            android:drawablePadding="@dimen/my_drawablepaddingedt"
-            android:paddingHorizontal="@dimen/my_drawablepaddingedt"
+            android:layout_marginTop="@dimen/size15"
+            android:layout_height="@dimen/size60"
+            android:drawablePadding="@dimen/size15"
+            android:paddingHorizontal="@dimen/size15"
             android:inputType="textPassword"
             android:imeOptions="actionNext"
             android:gravity="center_vertical"
-            android:id="@+id/edittextnewpasswordF" 
+            android:id="@+id/editTextConfirmPassword" 
             android:background="@drawable/shape_rectangle"
-            android:hint="@string/newpassword"
+            android:hint="@string/confirmPassword"
             android:drawableRight="@drawable/ic_visibilityoff"/>
 
-    <EditText
+  
+
+   
+
+      <EditText
             android:layout_width="match_parent"
-            android:layout_height="@dimen/my_heightlayoutedt"
-            android:layout_margin="@dimen/my_margintext"
-            android:paddingHorizontal="@dimen/my_drawablepaddingedt"
-            android:drawablePadding="@dimen/my_drawablepaddingedt"
+            android:layout_height="@dimen/size60"
+            android:layout_marginTop="@dimen/size15"
+            android:paddingHorizontal="@dimen/size15"
+            android:drawablePadding="@dimen/size15"
             android:inputType="number"
             android:imeOptions="actionDone"
             android:gravity="center_vertical"
-            android:id="@+id/edittextotpF" 
+            android:id="@+id/editTextOtp" 
             android:background="@drawable/shape_rectangle"
             android:hint="@string/otp"/>
 
@@ -68,14 +73,14 @@
 
      <TextView
         
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/sendotp"
-        android:layout_marginTop="@dimen/my_margintopforgotpass"
-        android:layout_marginRight="@dimen/my_margingrightCreateOTP"
-        android:textSize="@dimen/my_textsize"
-        android:layout_gravity="center"
-        android:id="@+id/textviewgenerateOTPF"
+        android:text="@string/sendOtp"
+        android:layout_marginTop="@dimen/size5"
+        android:layout_marginRight="@dimen/size8"
+        android:textSize="@dimen/scale17"
+        android:layout_gravity="right"
+        android:id="@+id/textViewGenerateOtp"
         android:textStyle="bold"
         android:gravity="right"
         android:textColor="@drawable/textselector"/>
@@ -84,16 +89,16 @@
 
     <Button
         
-        android:layout_width="@dimen/my_buttonwidthlayout"
-        android:layout_height="@dimen/my_buttonheightlayout"
+        android:layout_width="@dimen/size220"
+        android:layout_height="@dimen/size45"
         android:text="@string/confirm"
         android:textAllCaps="false"
-        android:layout_marginTop="@dimen/my_marginTopbutton"
-        android:textSize="@dimen/my_buttontextsize"
+        android:layout_marginTop="@dimen/size40"
+        android:textSize="@dimen/scale20"
         android:layout_gravity="center"
         android:background="@drawable/buttonshape"
-        android:id="@+id/buttonconfirmF"
-        android:textColor="@color/my_white"/>
+        android:id="@+id/buttonConfirm"
+        android:textColor="@color/white"/>
 
 
        

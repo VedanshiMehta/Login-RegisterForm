@@ -4,14 +4,14 @@
 	<gradient
 	android:angle="45"
 	android:centerX="0.45"
-	android:centerColor="@color/my_white"
-	android:startColor="@color/my_backgroundpink"
-	android:endColor="@color/my_white"/>
+	android:centerColor="@color/white"
+	android:startColor="@color/darkPink"
+	android:endColor="@color/white"/>
 
-	<padding android:left="@dimen/my_paddingshape"
-	  android:right="@dimen/my_paddingshape"
-	  android:top="@dimen/my_paddingshape"
-	  android:bottom="@dimen/my_paddingshape" />
+	<padding android:left="@dimen/size5"
+	  android:right="@dimen/size5"
+	  android:top="@dimen/size5"
+	  android:bottom="@dimen/size5" />
 
 
 	

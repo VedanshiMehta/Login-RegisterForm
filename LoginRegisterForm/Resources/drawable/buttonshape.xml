@@ -6,17 +6,17 @@
 
 		<shape  android:shape="rectangle">
 
-			<padding android:left="@dimen/my_paddingshape"
-					  android:right="@dimen/my_paddingshape"
-					  android:top="@dimen/my_paddingshape"
-					  android:bottom="@dimen/my_paddingshape" />
+			<padding android:left="@dimen/size5"
+					  android:right="@dimen/size5"
+					  android:top="@dimen/size5"
+					  android:bottom="@dimen/size5" />
 
-			<corners android:radius="@dimen/my_cornerRadius"/>
+			<corners android:radius="@dimen/size20"/>
 
-			<solid android:color="@color/my_oxfordblue" />
+			<solid android:color="@color/oxfordBlue" />
 
-			<stroke android:color="@color/my_oxfordblue"
-					android:width="@dimen/my_strokesize"/>
+			<stroke android:color="@color/oxfordBlue"
+					android:width="@dimen/size2"/>
 		</shape>
 	</item>
 	<item android:state_enabled="true" android:state_pressed="false" >
@@ -24,17 +24,17 @@
 
 		<shape  android:shape="rectangle">
 
-			<padding android:left="@dimen/my_paddingshape"
-						android:right="@dimen/my_paddingshape"
-						android:top="@dimen/my_paddingshape"
-						android:bottom="@dimen/my_paddingshape" />
+			<padding android:left="@dimen/size5"
+						android:right="@dimen/size5"
+						android:top="@dimen/size5"
+						android:bottom="@dimen/size5" />
 
-			<corners android:radius="@dimen/my_cornerRadius"/>
+			<corners android:radius="@dimen/size20"/>
 
-			<solid android:color="@color/my_bluebutton" />
+			<solid android:color="@color/vividBlue" />
 
-			<stroke android:color="@color/my_bluebutton"
-					android:width="@dimen/my_strokesize"/>
+			<stroke android:color="@color/vividBlue"
+					android:width="@dimen/size2"/>
 		</shape>
 	</item>
 	

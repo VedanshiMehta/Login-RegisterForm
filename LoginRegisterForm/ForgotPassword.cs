@@ -4,6 +4,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Google.Android.Material.TextField;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,11 +15,12 @@ namespace LoginRegisterForm
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme")]
     class ForgotPassword : Activity 
     {
-        private EditText _myFpassword;
-        private EditText _myFnewpassword;
-        private TextView _mytextOTP;
-        private EditText _myOTPedts;
-        private Button _mybutton;
+        private EditText _myNewPasswordEditText;
+        private EditText _myConfirmPasswordEditText;
+        private EditText _myOtpEditText;
+        private TextView _myOtpText;
+        private Button _myConfirmButton;
+    
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -32,13 +34,13 @@ namespace LoginRegisterForm
 
         private void UIClick()
         {
-            _mybutton.Click += _mybutton_Click;
-            _mytextOTP.Click += _mytextOTP_Click;
+            _myConfirmButton.Click += _mybutton_Click;
+            _myOtpText.Click += _mytextOTP_Click;
         }
 
         private void _mybutton_Click(object sender, EventArgs e)
         {
-            if (passwordfill() && newpasswordfill() && otpfill())
+            if (isValidateNewPassword() && isValidateConfirmPassword() && isValidateOtp())
             {
                 Toast.MakeText(this, "Password changed Sucessfully", ToastLength.Short).Show();
                 Finish();
@@ -54,68 +56,69 @@ namespace LoginRegisterForm
             }
         }
 
-        private bool otpfill()
+
+        private bool isValidateNewPassword()
         {
-            if (_myOTPedts.Text.Length == 0)
+            if (_myNewPasswordEditText.Text.Length == 0)
             {
 
-                _myOTPedts.Error = "Enter OTP";
+                _myNewPasswordEditText.Error = "Enter New Password";
                 return false;
             }
-            else if (_myOTPedts.Text.Length != 4)
+            else if (_myNewPasswordEditText.Text.Length < 8)
             {
 
-                _myOTPedts.Error = "Invalid OTP";
+                _myNewPasswordEditText.Error = "Invalid Password";
                 return false;
 
             }
             return true;
         }
 
-        private bool newpasswordfill()
+        private bool isValidateConfirmPassword()
         {
-            if (_myFnewpassword.Text.Length == 0)
+            if (_myConfirmPasswordEditText.Text.Length == 0)
             {
 
-                _myFnewpassword.Error = "Enter New Password";
+                _myConfirmPasswordEditText.Error = "Enter Password";
                 return false;
             }
-            else if (_myFnewpassword.Text.Length < 8)
+            else if (_myConfirmPasswordEditText.Text.Length < 8)
             {
 
-                _myFnewpassword.Error = "Invalid Password";
+                _myConfirmPasswordEditText.Error = "Invalid Password";
                 return false;
 
             }
-            else if (_myFnewpassword.Text != _myFpassword.Text)
+            else if (_myConfirmPasswordEditText.Text != _myNewPasswordEditText.Text)
             {
 
-                _myFnewpassword.Error = "New password should match your old password";
+                _myConfirmPasswordEditText.Error = "Both password doesn't match";
+                return false;
+
+            }
+
+            return true;
+        }
+        private bool isValidateOtp()
+        {
+            if (_myOtpEditText.Text.Length == 0)
+            {
+
+                _myOtpEditText.Error = "Enter OTP";
+                return false;
+            }
+            else if (_myOtpEditText.Text.Length != 4)
+            {
+
+                _myOtpEditText.Error = "Invalid OTP";
                 return false;
 
             }
             return true;
         }
 
-        private bool passwordfill()
-        {
-            if (_myFpassword.Text.Length == 0)
-            {
-
-                _myFpassword.Error = "Enter Your current Password";
-                return false;
-            }
-            else if (_myFpassword.Text.Length < 8)
-            {
-
-                _myFpassword.Error = "Invalid Password";
-                return false;
-
-            }
-            return true;
-        }
-
-
+       
         private void _mytextOTP_Click(object sender, EventArgs e)
         {
             Toast.MakeText(this, "OTP has been Sent to your email", ToastLength.Short).Show();
@@ -124,19 +127,16 @@ namespace LoginRegisterForm
         
         private void UIRefernece()
         {
-            _myFpassword = FindViewById<EditText>(Resource.Id.edittextpasswordF);
-            _myFnewpassword = FindViewById<EditText>(Resource.Id.edittextnewpasswordF);
-            _myOTPedts = FindViewById<EditText>(Resource.Id.edittextotpF);
-            _mytextOTP = FindViewById<TextView>(Resource.Id.textviewgenerateOTPF);
-            _mybutton = FindViewById<Button>(Resource.Id.buttonconfirmF);
-
-            //_myFpassword.Touch += _myFpassword_Touch;
+            _myNewPasswordEditText = FindViewById<EditText>(Resource.Id.editTextNewPassword);
+            _myConfirmPasswordEditText= FindViewById<EditText>(Resource.Id.editTextConfirmPassword);
+            _myOtpEditText = FindViewById<EditText>(Resource.Id.editTextOtp);
+            _myOtpText= FindViewById<TextView>(Resource.Id.textViewGenerateOtp);
+            _myConfirmButton = FindViewById<Button>(Resource.Id.buttonConfirm);
+        
+            
         }
 
-        /*private void _myFpassword_Touch(object sender, View.TouchEventArgs e)
-        {
-            
-        }*/
+       
 
        
     }

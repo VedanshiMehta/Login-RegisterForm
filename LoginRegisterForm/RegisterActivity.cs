@@ -9,7 +9,6 @@ using Android.Views;
 using Android.Widget;
 using System;
 using System.Collections.Generic;
-
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -19,14 +18,14 @@ namespace LoginRegisterForm
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme")]
     public class RegisterActivity : Activity
     {
-        private TextView _myregister;
-        private TextView _myRusername;
-        private TextView _myRemailaddress;
-        private EditText _myRusernameedts;
-        private EditText _myRpassword;
-        private Button _myresgisterB;
-        private ImageView _myRfacebook;
-        private ImageView _myRgoogle;
+        private TextView _myRegisterText;
+        private EditText _myUserEditText;
+        private EditText _myEmailAddressEditText;
+        private EditText _myUserNameEditText;
+        private EditText _myPasswordEditText;
+        private Button _myResgisterButton;
+        private ImageView _myFacebookImage;
+        private ImageView _myGoogleImage;
         private Regex username = new Regex("^[a-z-A-Z]*$");
         private Regex email = new Regex(@"^[a-z]([\w]*[\w\.]*(?!\.)@gmail.com)");
 
@@ -43,16 +42,17 @@ namespace LoginRegisterForm
 
         private void UIClickevents()
         {
-            _myresgisterB.Click += _resgister_Click;
-            _myRgoogle.Click += _myRgoogle_Click;
-            _myRfacebook.Click += _myRfacebook_Click;
+            _myResgisterButton.Click += _resgister_Click;
+            _myFacebookImage.Click += _myRfacebook_Click;
+            _myGoogleImage.Click += _myRgoogle_Click;
+            
         }
 
         private void _resgister_Click(object sender, EventArgs e)
         {
 
 
-            if (myuserfill() && myemailfill() && myusernamefill() && mypasswordfill())
+            if (isValidateUserfill() && isValidateEmail() && isValidateUserNameRegister() && isValidatePasswordRegister())
             {
                 Toast.MakeText(this, "Registeration Sucessfull", ToastLength.Short).Show();
 
@@ -69,65 +69,20 @@ namespace LoginRegisterForm
 
 
         }
-
-        private bool mypasswordfill()
+        private bool isValidateUserfill()
         {
 
-            if (_myRpassword.Text.Length == 0)
+            if (_myUserEditText.Text.Length == 0)
             {
 
-                _myRpassword.Error = "Enter Password";
-                return false;
-
-
-            }
-            else if (_myRpassword.Text.Length < 8)
-            {
-
-
-                _myRpassword.Error = "Minimum length of  password should be 8";
-                return false;
-            }
-
-            return true;
-        }
-
-        private bool myusernamefill()
-        {
-
-            if (_myRusernameedts.Text.Length == 0)
-            {
-
-                _myRusernameedts.Error = "Enter Username";
-                _myRusernameedts.RequestFocus();
-
-                return false;
-            }
-            else if (!isValiduser(_myRusernameedts.Text))
-            {
-
-                _myRusernameedts.Error = "Numbers and Special-Characters not allowed";
-                _myRusernameedts.RequestFocus();
-                return false;
-            }
-
-            return true;
-        }
-
-        private bool myemailfill()
-        {
-
-            if (_myRemailaddress.Text.Length == 0)
-            {
-
-                _myRemailaddress.Error = "Enter Email Address";
+                _myUserEditText.Error = "Enter User Name";
 
                 return false;
 
             }
-            else if (!isValidemail(_myRemailaddress.Text))
+            else if (!isValidUser(_myUserEditText.Text))
             {
-                _myRemailaddress.Error = "Entered email address is not valid";
+                _myUserEditText.Error = "Numbers are not allowed";
 
                 return false;
 
@@ -135,36 +90,7 @@ namespace LoginRegisterForm
             return true;
         }
 
-        private bool isValidemail(string text)
-        {
-            if (string.IsNullOrEmpty(text))
-                return false;
-
-            return email.IsMatch(text);
-        }
-
-        private bool myuserfill()
-        {
-
-            if (_myRusername.Text.Length == 0)
-            {
-
-                _myRusername.Error = "Enter User Name";
-
-                return false;
-
-            }
-            else if (!isValiduser(_myRusername.Text))
-            {
-                _myRusername.Error = "Numbers are not allowed";
-
-                return false;
-
-            }
-            return true;
-        }
-
-        private bool isValiduser(string text)
+        private bool isValidUser(string text)
         {
             if (string.IsNullOrEmpty(text))
 
@@ -172,6 +98,86 @@ namespace LoginRegisterForm
 
             return username.IsMatch(text);
         }
+        private bool isValidateEmail()
+        {
+
+            if (_myEmailAddressEditText.Text.Length == 0)
+            {
+
+                _myEmailAddressEditText.Error = "Enter Email Address";
+
+                return false;
+
+            }
+            else if (!isValidEmail(_myEmailAddressEditText.Text))
+            {
+                _myEmailAddressEditText.Error = "Entered email address is not valid";
+
+                return false;
+
+            }
+            return true;
+        }
+
+        private bool isValidEmail(string text)
+        {
+            if (string.IsNullOrEmpty(text))
+                return false;
+
+            return email.IsMatch(text);
+        }
+
+
+        private bool isValidateUserNameRegister()
+        {
+
+            if (_myUserNameEditText.Text.Length == 0)
+            {
+
+                _myUserNameEditText.Error = "Enter Username";
+                _myUserNameEditText.RequestFocus();
+
+                return false;
+            }
+            else if (!isValidUser(_myUserNameEditText.Text))
+            {
+
+                _myUserNameEditText.Error = "Numbers and Special-Characters not allowed";
+                _myUserNameEditText.RequestFocus();
+                return false;
+            }
+
+            return true;
+        }
+
+        private bool isValidatePasswordRegister()
+        {
+
+            if (_myPasswordEditText.Text.Length == 0)
+            {
+
+                _myPasswordEditText.Error = "Enter Password";
+                return false;
+
+
+            }
+            else if (_myPasswordEditText.Text.Length < 8)
+            {
+
+
+                _myPasswordEditText.Error = "Minimum length of  password should be 8";
+                return false;
+            }
+
+            return true;
+        }
+
+       
+
+   
+
+       
+     
 
         private void _myRfacebook_Click(object sender, EventArgs e)
         {
@@ -187,17 +193,17 @@ namespace LoginRegisterForm
 
         private void UIReference()
         {
-            _myregister = FindViewById<TextView>(Resource.Id.texRegister);
-            _myRusername = FindViewById<EditText>(Resource.Id.edittextuserR);
-            _myRemailaddress = FindViewById<EditText>(Resource.Id.edittextemailaddressR);
-            _myRusernameedts = FindViewById<EditText>(Resource.Id.edittextusernameR);
-            _myRpassword = FindViewById<EditText>(Resource.Id.edittextpasswordR);
-            _myresgisterB = FindViewById<Button>(Resource.Id.buttonregisterR);
-            _myRfacebook = FindViewById<ImageView>(Resource.Id.imageviewfacebookR);
-            _myRgoogle = FindViewById<ImageView>(Resource.Id.imageviewgoogleR);
+            _myRegisterText = FindViewById<TextView>(Resource.Id.textRegister);
+            _myUserEditText= FindViewById<EditText>(Resource.Id.editTextUser);
+            _myEmailAddressEditText = FindViewById<EditText>(Resource.Id.editTextEmailAddress);
+            _myUserNameEditText = FindViewById<EditText>(Resource.Id.editTextUserNameRegister);
+            _myPasswordEditText = FindViewById<EditText>(Resource.Id.editTextPasswordRegister);
+            _myResgisterButton = FindViewById<Button>(Resource.Id.buttonRegister);
+            _myFacebookImage = FindViewById<ImageView>(Resource.Id.imageViewFacebookRegister);
+            _myGoogleImage = FindViewById<ImageView>(Resource.Id.imageViewGoogleRegister);
 
-            TextPaint paint = _myregister.Paint;
-            float width = paint.MeasureText(_myregister.Text);
+            TextPaint paint = _myRegisterText.Paint;
+            float width = paint.MeasureText(_myRegisterText.Text);
             int[] vs = new int[] {
 
 
@@ -207,8 +213,8 @@ namespace LoginRegisterForm
 
             };
 
-            Shader textshade = new LinearGradient(0, 150, width, _myregister.TextSize, vs, null, Shader.TileMode.Clamp);
-            _myregister.Paint.SetShader(textshade);
+            Shader textshade = new LinearGradient(0, 150, width, _myRegisterText.TextSize, vs, null, Shader.TileMode.Clamp);
+            _myRegisterText.Paint.SetShader(textshade);
 
         }
     }

@@ -17,14 +17,14 @@ namespace LoginRegisterForm
     public class SplashScreen : Activity
     {
 
-        private ImageView splashImage;
+        private ImageView _mysplashImage;
         protected override async void OnResume()
         {
             base.OnResume();
             SetContentView(Resource.Layout.splashscreenlayout);
-            splashImage = FindViewById<ImageView>(Resource.Id.imageviewbaskinrobbins);
+            _mysplashImage = FindViewById<ImageView>(Resource.Id.imageViewBaskinRobbins);
             var animation = AnimationUtils.LoadAnimation(this, Resource.Animation.animfadetrans);
-            splashImage.StartAnimation(animation);
+            _mysplashImage.StartAnimation(animation);
             await SimulateStratup();
 
         }

@@ -1,49 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <resources>
 
-	<dimen name="my_heightlayoutedt">60dp</dimen>
-	<dimen name="my_buttonheightlayout">45dp</dimen>
-	<dimen name="my_buttonwidthlayout">220dp</dimen>
-	<dimen name="my_imageSize">50dp</dimen>
-	<dimen name="my_baskinimagewidth">150dp</dimen>
-	<dimen name="my_baskinimageheight">100dp</dimen>
-	<dimen name="my_baskinssplashsize">250dp</dimen>
-	<dimen name="my_cornerRadius">20dp</dimen>
-	<dimen name="my_strokesize">2dp</dimen>
-	<dimen name="my_rectcornerradius">10dp</dimen>
-	
-	<dimen name="my_paddingvalue">20dp</dimen>
-	<dimen name="my_paddingtext">10dp</dimen>
-	<dimen name="my_drawablepaddingedt">15dp</dimen>
-	<dimen name="my_paddingshape">5dp</dimen>
-
-	<dimen name="my_margintoplogintext">50dp</dimen>
-	<dimen name="my_margintext">10dp</dimen>
-	<dimen name="my_margincatext">5dp</dimen>
-	<dimen name="my_marginTopedt">90dp</dimen>
-	<dimen name="my_margintopforgotpass">3dp</dimen>
-	<dimen name="my_marginrightforgotpass">15dp</dimen>
-	<dimen name="my_marginTopbutton">40dp</dimen>
-	<dimen name="my_margingLeftImage">20dp</dimen>
-	<dimen name="my_marginedt">8dp</dimen>
-	<dimen name="my_maringTopregisterbtton">30dp</dimen>
-	<dimen name="my_marginTopFedt">80dp</dimen>
-	<dimen name="my_margingrightCreateOTP">15dp</dimen>
-
-	<dimen name="my_logintextsize">50sp</dimen>
-	<dimen name="my_textsize">16sp</dimen>
-	<dimen name="my_catextsize">17sp</dimen>
-	<dimen name="my_buttontextsize">20sp</dimen>
-	<dimen name="my_registertextsize">40sp</dimen>
-	
-
-	
-	
-	
-	
-	
-	
-
+	<dimen name="size2">2dp</dimen>
+	<dimen name="size5">5dp</dimen>
+	<dimen name="size8">8dp</dimen>
+	<dimen name="size10">10dp</dimen>
+	<dimen name="size15">15dp</dimen>
+	<dimen name="size20">20dp</dimen>
+	<dimen name="size30">30dp</dimen>
+	<dimen name="size40">40dp</dimen>
+	<dimen name="size45">45dp</dimen>
+	<dimen name="size50">50dp</dimen>
+	<dimen name="size60">60dp</dimen>
+	<dimen name="size80">80dp</dimen>
+	<dimen name="size90">90dp</dimen>
+	<dimen name="size100">100dp</dimen>
+	<dimen name="size150">150dp</dimen>
+	<dimen name="size220">220dp</dimen>
+	<dimen name="size250">250dp</dimen>
+	<dimen name="scale50">50sp</dimen>
+	<dimen name="scale16">16sp</dimen>
+	<dimen name="scale17">17sp</dimen>
+	<dimen name="scale20">20sp</dimen>
+	<dimen name="scale40">40sp</dimen>
 		
 
 </resources>

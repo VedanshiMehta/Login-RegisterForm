@@ -4,47 +4,47 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:id="@+id/linearLayoutR1"
+    android:id="@+id/linearLayoutRegisterPage1"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/backgrounditem"
-    android:padding="@dimen/my_paddingvalue">
+    android:padding="@dimen/size20">
 
    
       <TextView
-          android:id="@+id/texRegister"
+          android:id="@+id/textRegister"
           android:text="@string/register"
-          android:layout_marginTop="@dimen/my_margintoplogintext"
-          android:padding="@dimen/my_paddingtext"
-          android:textSize="@dimen/my_registertextsize"
+          android:layout_marginTop="@dimen/size50"
+          android:padding="@dimen/size10"
+          android:textSize="@dimen/scale40"
           android:textStyle="bold"
-          android:textColor="@color/my_darkblue"
+          android:textColor="@color/darkBlue"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"/>
 
       <LinearLayout
-            android:id="@+id/linearLayoutR2"
+            android:id="@+id/linearLayoutRegisterPage2"
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_marginLeft="@dimen/my_margintext"
+            android:layout_marginLeft="@dimen/size10"
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/textviewaccountquestionR"
-                android:text="@string/accquestion" 
-                android:textSize="@dimen/my_textsize"
-                android:textColor="@color/my_darkgray"
+                android:id="@+id/textViewAccountQuestionRegister"
+                android:text="@string/accQuestion" 
+                android:textSize="@dimen/scale16"
+                android:textColor="@color/darkGrey"
                 android:fontFamily="sans-serif"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
             <TextView
-                android:id="@+id/textviewcreateaccounttextR"
-                android:text="@string/createaccount"
-                android:layout_marginLeft="@dimen/my_margincatext"  
-                android:textSize="@dimen/my_catextsize"
+                android:id="@+id/textViewCreateAccountRegister"
+                android:text="@string/createAccount"
+                android:layout_marginLeft="@dimen/size10"  
+                android:textSize="@dimen/scale17"
                 android:fontFamily="sans-serif"
-                android:textColor="@color/my_lightpink"    
+                android:textColor="@color/pink"    
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
@@ -54,17 +54,14 @@
 
       <EditText
          android:layout_width="match_parent"
-         android:layout_height="@dimen/my_heightlayoutedt"
-         android:layout_marginTop="@dimen/my_margintoplogintext"
-         android:layout_marginLeft="@dimen/my_margintext"
-         android:layout_marginRight="@dimen/my_margintext"
-         android:layout_marginBottom="@dimen/my_marginedt"
-         android:paddingHorizontal="@dimen/my_drawablepaddingedt"
+         android:layout_height="@dimen/size60"
+         android:layout_marginTop="@dimen/size50"
+         android:paddingHorizontal="@dimen/size15"
          android:gravity="center_vertical"
          android:inputType="text"
          android:imeOptions="actionNext"
-         android:drawablePadding="@dimen/my_drawablepaddingedt"
-         android:id="@+id/edittextuserR" 
+         android:drawablePadding="@dimen/size15"
+         android:id="@+id/editTextUser" 
          android:background="@drawable/shape_rectangle"
          android:hint="@string/user"
          android:drawableLeft="@drawable/ic_user"/>
@@ -72,91 +69,91 @@
     
       <EditText
          android:layout_width="match_parent"
-         android:layout_height="@dimen/my_heightlayoutedt"
-         android:layout_margin="@dimen/my_marginedt"
-         android:paddingHorizontal="@dimen/my_drawablepaddingedt"
-         android:drawablePadding="@dimen/my_drawablepaddingedt"
+         android:layout_height="@dimen/size60"
+         android:layout_marginTop="@dimen/size15"
+         android:paddingHorizontal="@dimen/size15"
+         android:drawablePadding="@dimen/size15"
          android:inputType="textEmailAddress"
          android:imeOptions="actionNext"
          android:gravity="center_vertical"
-         android:id="@+id/edittextemailaddressR" 
+         android:id="@+id/editTextEmailAddress" 
          android:background="@drawable/shape_rectangle"
          android:hint="@string/email"
          android:drawableLeft="@drawable/ic_email"/>
 
       <EditText
          android:layout_width="match_parent"
-         android:layout_height="@dimen/my_heightlayoutedt"
-         android:layout_margin="@dimen/my_marginedt"
-         android:paddingHorizontal="@dimen/my_drawablepaddingedt"
-         android:drawablePadding="@dimen/my_drawablepaddingedt"
+         android:layout_height="@dimen/size60"
+         android:layout_marginTop="@dimen/size15"
+         android:paddingHorizontal="@dimen/size15"
+         android:drawablePadding="@dimen/size15"
          android:inputType="text"
          android:imeOptions="actionNext"
          android:gravity="center_vertical"
-         android:id="@+id/edittextusernameR" 
+         android:id="@+id/editTextUserNameRegister" 
          android:background="@drawable/shape_rectangle"
-         android:hint="@string/username"
+         android:hint="@string/userName"
          android:drawableLeft="@drawable/ic_user"/>
 
       <EditText
           android:layout_width="match_parent"
-          android:layout_height="@dimen/my_heightlayoutedt"
-          android:layout_margin="@dimen/my_marginedt"
-          android:paddingHorizontal="@dimen/my_drawablepaddingedt"
+          android:layout_height="@dimen/size60"
+          android:layout_marginTop="@dimen/size15"
+          android:paddingHorizontal="@dimen/size15"
           android:inputType="textPassword"
           android:imeOptions="actionDone"
-          android:drawablePadding="@dimen/my_drawablepaddingedt"
+          android:drawablePadding="@dimen/size15"
           android:gravity="center_vertical"
-          android:id="@+id/edittextpasswordR" 
+          android:id="@+id/editTextPasswordRegister" 
           android:background="@drawable/shape_rectangle"
           android:hint="@string/password"
           android:drawableLeft="@drawable/ic_password"/>
 
 
       <Button
-         android:layout_width="@dimen/my_buttonwidthlayout"
-        android:layout_height="@dimen/my_buttonheightlayout"
+         android:layout_width="@dimen/size220"
+        android:layout_height="@dimen/size45"
         android:text="@string/register"
         android:textAllCaps="false"
-        android:layout_marginTop="30dp"
-        android:textSize="@dimen/my_buttontextsize"
+        android:layout_marginTop="@dimen/size30"
+        android:textSize="@dimen/scale20"
         android:layout_gravity="center"
         android:background="@drawable/buttonshape"
-        android:id="@+id/buttonregisterR"
-        android:textColor="@color/my_white"/>
+        android:id="@+id/buttonRegister"
+        android:textColor="@color/white"/>
 
      <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/registeroption"
-        android:id="@+id/textviewregisteroptionR"
-        android:layout_marginTop="@dimen/my_maringTopregisterbtton"
+        android:text="@string/registerOption"
+        android:id="@+id/textViewRegisterOption"
+        android:layout_marginTop="@dimen/size40"
         android:gravity=" center"
-        android:textSize="@dimen/my_textsize"
+        android:textSize="@dimen/scale17"
         android:textStyle="bold"
-        android:textColor="@color/my_darkgray"/>
+        android:textColor="@color/darkGrey"/>
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:id="@+id/linearLayout4"
+        android:id="@+id/linearLayoutRegisterPage3"
         android:gravity="center"
-        android:layout_marginTop="@dimen/my_margintext"
-        android:padding="@dimen/my_paddingtext">
+        android:layout_marginTop="@dimen/size10"
+        android:padding="@dimen/size10">
 
         <ImageView
-            android:layout_width="@dimen/my_imageSize"
-            android:layout_height="@dimen/my_imageSize"
-            android:id="@+id/imageviewfacebookR"
+            android:layout_width="@dimen/size50"
+            android:layout_height="@dimen/size50"
+            android:id="@+id/imageViewFacebookRegister"
             android:src="@drawable/facebook"/>
 
         <ImageView
-            android:layout_width="@dimen/my_imageSize"
-            android:layout_height="@dimen/my_imageSize"
-            android:id="@+id/imageviewgoogleR"
-            android:layout_marginLeft="@dimen/my_margingLeftImage"
+            android:layout_width="@dimen/size50"
+            android:layout_height="@dimen/size50"
+            android:id="@+id/imageViewGoogleRegister"
+            android:layout_marginLeft="@dimen/size20"
             android:src="@drawable/google1"/>
 
 

@@ -15,15 +15,15 @@ namespace LoginRegisterForm
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme")]
     public class MainActivity : AppCompatActivity
     {
-        private TextView _mylogintext;
-        private TextView _mycreateacc;
-        private EditText _myusernameedts;
-        private EditText _mypassword;
-        private Button _myloginB;
-        private TextView _myforgetpassword;
-        private ImageView _myfacebook;
-        private ImageView _mygoogle;
-        private Regex username = new Regex("^[a-z-A-Z]*$");
+        private TextView _myLoginText;
+        private TextView _myCreateAccountText;
+        private EditText _myUserNameEditText;
+        private EditText _myPasswordEditText;
+        private Button _myLoginButton;
+        private TextView _myForgetPasswordText;
+        private ImageView _myFacebookImage;
+        private ImageView _myGoogleImage;
+        private Regex userName = new Regex("^[a-z-A-Z]*$");
      
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -40,11 +40,11 @@ namespace LoginRegisterForm
 
         private void UIClickEvent()
         {
-            _mycreateacc.Click += _mycreateacc_Click;
-            _myloginB.Click += _mylogin_Click;
-            _myfacebook.Click += _myfacebook_Click;
-            _mygoogle.Click += _mygoogle_Click;
-            _myforgetpassword.Click += _forgetpassword_Click;
+            _myCreateAccountText.Click += _mycreateacc_Click;
+            _myLoginButton.Click += _mylogin_Click;
+            _myFacebookImage.Click += _myfacebook_Click;
+            _myGoogleImage.Click += _mygoogle_Click;
+            _myForgetPasswordText.Click += _forgetpassword_Click;
         }
 
         private void _mycreateacc_Click(object sender, EventArgs e)
@@ -58,7 +58,7 @@ namespace LoginRegisterForm
         {
 
 
-            if (usernamefill() && passwordfill())
+            if (isValidateUserName() && isValidatePassword())
             {
                 Toast.MakeText(this, "Login Sucessfull", ToastLength.Short).Show();
             }
@@ -90,21 +90,21 @@ namespace LoginRegisterForm
 
 
 
-        private bool usernamefill()
+        private bool isValidateUserName()
         {
 
 
-            if (_myusernameedts.Text.Length == 0)
+            if (_myUserNameEditText.Text.Length == 0)
             {
 
-                _myusernameedts.Error = "Enter Username";
+                _myUserNameEditText.Error = "Enter Username";
                 return false;
 
             }
-            else if (!isValidateUsername(_myusernameedts.Text))
+            else if (!isValidUsername(_myUserNameEditText.Text))
 
             {
-                _myusernameedts.Error = "Numbers and Special-Characters not allowed";
+                _myUserNameEditText.Error = "Numbers and Special-Characters not allowed";
                 return false;
             }
             return true;
@@ -113,33 +113,33 @@ namespace LoginRegisterForm
 
         }
 
-        private bool isValidateUsername(string text)
+        private bool isValidUsername(string text)
         {
             if (string.IsNullOrEmpty(text))
 
                 return false;
 
 
-            return username.IsMatch(text);
+            return userName.IsMatch(text);
 
         }
 
-        private bool passwordfill()
+        private bool isValidatePassword()
         {
 
            
-            if (_mypassword.Text.Length == 0)
+            if (_myPasswordEditText.Text.Length == 0)
             {
-                
-                _mypassword.Error = "Enter Password";
+
+                _myPasswordEditText.Error = "Enter Password";
                 return false;
             }
 
-            else if (_mypassword.Text.Length < 8)
+            else if (_myPasswordEditText.Text.Length < 8)
             {
 
-             
-                _mypassword.Error = "Minimum length of  password should be 8";
+
+                _myPasswordEditText.Error = "Minimum length of  password should be 8";
                 return false;
             }
 
@@ -150,17 +150,17 @@ namespace LoginRegisterForm
 
         private void UIReference()
         {
-            _mylogintext = FindViewById<TextView>(Resource.Id.textviewlogin);
-            _mycreateacc = FindViewById<TextView>(Resource.Id.textviewcreateaccountL);
-            _myusernameedts = FindViewById<EditText>(Resource.Id.edittextusernameL);
-            _mypassword = FindViewById<EditText>(Resource.Id.edittextpasswordL);
-            _myloginB = FindViewById<Button>(Resource.Id.buttonloginL);
-            _myforgetpassword = FindViewById<TextView>(Resource.Id.textviewforgotpasswordL);
-            _myfacebook = FindViewById<ImageView>(Resource.Id.imageviewfacebookL);
-            _mygoogle = FindViewById<ImageView>(Resource.Id.imageviewgoogleL);
+            _myLoginText = FindViewById<TextView>(Resource.Id.textViewLogin);
+            _myCreateAccountText= FindViewById<TextView>(Resource.Id.textViewCreateAccount);
+            _myUserNameEditText = FindViewById<EditText>(Resource.Id.editTextUserName);
+            _myPasswordEditText = FindViewById<EditText>(Resource.Id.editTextPassword);
+            _myLoginButton= FindViewById<Button>(Resource.Id.buttonLogin);
+            _myForgetPasswordText = FindViewById<TextView>(Resource.Id.textViewForgotPassword);
+            _myFacebookImage= FindViewById<ImageView>(Resource.Id.imageViewfacebook);
+            _myGoogleImage = FindViewById<ImageView>(Resource.Id.imageViewGoogle);
 
-            TextPaint paint = _mylogintext.Paint;
-            float width = paint.MeasureText(_mylogintext.Text);
+            TextPaint paint = _myLoginText.Paint;
+            float width = paint.MeasureText(_myLoginText.Text);
 
             int[] vs = new int[]{
                 
@@ -170,9 +170,9 @@ namespace LoginRegisterForm
 
 
                     };
-            Shader textShader = new LinearGradient(0, 150 , width, _mylogintext.TextSize,
+            Shader textShader = new LinearGradient(0, 150 , width, _myLoginText.TextSize,
                     vs, null, Shader.TileMode.Clamp);
-            _mylogintext.Paint.SetShader(textShader);
+            _myLoginText.Paint.SetShader(textShader);
 
         }
 

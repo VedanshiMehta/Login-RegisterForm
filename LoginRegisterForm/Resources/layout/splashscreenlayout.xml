@@ -6,9 +6,9 @@
     android:gravity="center">
 
     <ImageView
-        android:layout_width="@dimen/my_baskinssplashsize"
-        android:layout_height="@dimen/my_baskinssplashsize"
-        android:id="@+id/imageviewbaskinrobbins"
+        android:layout_width="@dimen/size250"
+        android:layout_height="@dimen/size250"
+        android:id="@+id/imageViewBaskinRobbins"
         android:src="@drawable/baskinsplash"/>
 
 </LinearLayout>
