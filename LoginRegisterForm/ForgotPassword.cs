@@ -124,11 +124,11 @@ namespace LoginRegisterForm
         
         private void UIRefernece()
         {
-            _myFpassword = FindViewById<EditText>(Resource.Id.passwordF);
-            _myFnewpassword = FindViewById<EditText>(Resource.Id.newpasswordF);
-            _myOTPedts = FindViewById<EditText>(Resource.Id.otpF);
-            _mytextOTP = FindViewById<TextView>(Resource.Id.genrateOTPF);
-            _mybutton = FindViewById<Button>(Resource.Id.confirmbF);
+            _myFpassword = FindViewById<EditText>(Resource.Id.edittextpasswordF);
+            _myFnewpassword = FindViewById<EditText>(Resource.Id.edittextnewpasswordF);
+            _myOTPedts = FindViewById<EditText>(Resource.Id.edittextotpF);
+            _mytextOTP = FindViewById<TextView>(Resource.Id.textviewgenerateOTPF);
+            _mybutton = FindViewById<Button>(Resource.Id.buttonconfirmF);
 
             //_myFpassword.Touch += _myFpassword_Touch;
         }

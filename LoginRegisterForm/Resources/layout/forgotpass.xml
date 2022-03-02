@@ -13,7 +13,7 @@
 
 
     <ImageView
-        android:id="@+id/baskinlogoF"
+        android:id="@+id/imageviewbaskinlogoF"
         android:layout_marginTop="@dimen/my_margintoplogintext"
         android:layout_width="@dimen/my_baskinimagewidth"
         android:layout_height="@dimen/my_baskinimageheight"
@@ -28,10 +28,10 @@
             android:layout_marginBottom="@dimen/my_margintext"
             android:paddingHorizontal="@dimen/my_drawablepaddingedt"
             android:gravity="center_vertical"
-            android:inputType="textWebPassword"
+            android:inputType="textPassword"
             android:imeOptions="actionNext"
             android:drawablePadding="@dimen/my_drawablepaddingedt"
-            android:id="@+id/passwordF" 
+            android:id="@+id/edittextpasswordF" 
             android:background="@drawable/shape_rectangle"
             android:hint="@string/password"
             android:drawableRight="@drawable/ic_visibilityoff"/>
@@ -42,10 +42,10 @@
             android:layout_margin="@dimen/my_margintext"
             android:drawablePadding="@dimen/my_drawablepaddingedt"
             android:paddingHorizontal="@dimen/my_drawablepaddingedt"
-            android:inputType="textWebPassword"
+            android:inputType="textPassword"
             android:imeOptions="actionNext"
             android:gravity="center_vertical"
-            android:id="@+id/newpasswordF" 
+            android:id="@+id/edittextnewpasswordF" 
             android:background="@drawable/shape_rectangle"
             android:hint="@string/newpassword"
             android:drawableRight="@drawable/ic_visibilityoff"/>
@@ -59,7 +59,7 @@
             android:inputType="number"
             android:imeOptions="actionDone"
             android:gravity="center_vertical"
-            android:id="@+id/otpF" 
+            android:id="@+id/edittextotpF" 
             android:background="@drawable/shape_rectangle"
             android:hint="@string/otp"/>
 
@@ -75,7 +75,7 @@
         android:layout_marginRight="@dimen/my_margingrightCreateOTP"
         android:textSize="@dimen/my_textsize"
         android:layout_gravity="center"
-        android:id="@+id/genrateOTPF"
+        android:id="@+id/textviewgenerateOTPF"
         android:textStyle="bold"
         android:gravity="right"
         android:textColor="@drawable/textselector"/>
@@ -92,7 +92,7 @@
         android:textSize="@dimen/my_buttontextsize"
         android:layout_gravity="center"
         android:background="@drawable/buttonshape"
-        android:id="@+id/confirmbF"
+        android:id="@+id/buttonconfirmF"
         android:textColor="@color/my_white"/>
 
 

@@ -30,7 +30,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/accountquestionR"
+                android:id="@+id/textviewaccountquestionR"
                 android:text="@string/accquestion" 
                 android:textSize="@dimen/my_textsize"
                 android:textColor="@color/my_darkgray"
@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"/>
 
             <TextView
-                android:id="@+id/createaccounttextR"
+                android:id="@+id/textviewcreateaccounttextR"
                 android:text="@string/createaccount"
                 android:layout_marginLeft="@dimen/my_margincatext"  
                 android:textSize="@dimen/my_catextsize"
@@ -64,7 +64,7 @@
          android:inputType="text"
          android:imeOptions="actionNext"
          android:drawablePadding="@dimen/my_drawablepaddingedt"
-         android:id="@+id/userR" 
+         android:id="@+id/edittextuserR" 
          android:background="@drawable/shape_rectangle"
          android:hint="@string/user"
          android:drawableLeft="@drawable/ic_user"/>
@@ -79,7 +79,7 @@
          android:inputType="textEmailAddress"
          android:imeOptions="actionNext"
          android:gravity="center_vertical"
-         android:id="@+id/emailaddressR" 
+         android:id="@+id/edittextemailaddressR" 
          android:background="@drawable/shape_rectangle"
          android:hint="@string/email"
          android:drawableLeft="@drawable/ic_email"/>
@@ -93,7 +93,7 @@
          android:inputType="text"
          android:imeOptions="actionNext"
          android:gravity="center_vertical"
-         android:id="@+id/usernameR" 
+         android:id="@+id/edittextusernameR" 
          android:background="@drawable/shape_rectangle"
          android:hint="@string/username"
          android:drawableLeft="@drawable/ic_user"/>
@@ -107,7 +107,7 @@
           android:imeOptions="actionDone"
           android:drawablePadding="@dimen/my_drawablepaddingedt"
           android:gravity="center_vertical"
-          android:id="@+id/passwordR" 
+          android:id="@+id/edittextpasswordR" 
           android:background="@drawable/shape_rectangle"
           android:hint="@string/password"
           android:drawableLeft="@drawable/ic_password"/>
@@ -122,13 +122,14 @@
         android:textSize="@dimen/my_buttontextsize"
         android:layout_gravity="center"
         android:background="@drawable/buttonshape"
-        android:id="@+id/registerbuttonR"
+        android:id="@+id/buttonregisterR"
         android:textColor="@color/my_white"/>
 
      <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/registeroption"
+        android:id="@+id/textviewregisteroptionR"
         android:layout_marginTop="@dimen/my_maringTopregisterbtton"
         android:gravity=" center"
         android:textSize="@dimen/my_textsize"
@@ -148,13 +149,13 @@
         <ImageView
             android:layout_width="@dimen/my_imageSize"
             android:layout_height="@dimen/my_imageSize"
-            android:id="@+id/facebookIR"
+            android:id="@+id/imageviewfacebookR"
             android:src="@drawable/facebook"/>
 
         <ImageView
             android:layout_width="@dimen/my_imageSize"
             android:layout_height="@dimen/my_imageSize"
-            android:id="@+id/googleIR"
+            android:id="@+id/imageviewgoogleR"
             android:layout_marginLeft="@dimen/my_margingLeftImage"
             android:src="@drawable/google1"/>
 

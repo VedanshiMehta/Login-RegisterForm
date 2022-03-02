@@ -25,8 +25,6 @@ namespace LoginRegisterForm
         private ImageView _mygoogle;
         private Regex username = new Regex("^[a-z-A-Z]*$");
      
-
-
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -152,23 +150,20 @@ namespace LoginRegisterForm
 
         private void UIReference()
         {
-            _mylogintext = FindViewById<TextView>(Resource.Id.textlogin);
-            _mycreateacc = FindViewById<TextView>(Resource.Id.createaccounttextL);
-            _myusernameedts = FindViewById<EditText>(Resource.Id.usernameedtL);
-            _mypassword = FindViewById<EditText>(Resource.Id.passwordedtL);
-            _myloginB = FindViewById<Button>(Resource.Id.loginbuttonL);
-            _myforgetpassword = FindViewById<TextView>(Resource.Id.forgotpasstextL);
-            _myfacebook = FindViewById<ImageView>(Resource.Id.facebookIL);
-            _mygoogle = FindViewById<ImageView>(Resource.Id.googleIL);
+            _mylogintext = FindViewById<TextView>(Resource.Id.textviewlogin);
+            _mycreateacc = FindViewById<TextView>(Resource.Id.textviewcreateaccountL);
+            _myusernameedts = FindViewById<EditText>(Resource.Id.edittextusernameL);
+            _mypassword = FindViewById<EditText>(Resource.Id.edittextpasswordL);
+            _myloginB = FindViewById<Button>(Resource.Id.buttonloginL);
+            _myforgetpassword = FindViewById<TextView>(Resource.Id.textviewforgotpasswordL);
+            _myfacebook = FindViewById<ImageView>(Resource.Id.imageviewfacebookL);
+            _mygoogle = FindViewById<ImageView>(Resource.Id.imageviewgoogleL);
 
             TextPaint paint = _mylogintext.Paint;
             float width = paint.MeasureText(_mylogintext.Text);
 
             int[] vs = new int[]{
-
-
-
-                   
+                
                     Color.ParseColor("#002aba"),
                     Color.ParseColor("#002aba"),
                     Color.ParseColor("#f23ce7"),

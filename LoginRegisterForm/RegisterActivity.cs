@@ -188,32 +188,22 @@ namespace LoginRegisterForm
         private void UIReference()
         {
             _myregister = FindViewById<TextView>(Resource.Id.texRegister);
-            _myRusername = FindViewById<EditText>(Resource.Id.userR);
-            _myRemailaddress = FindViewById<EditText>(Resource.Id.emailaddressR);
-            _myRusernameedts = FindViewById<EditText>(Resource.Id.usernameR);
-            _myRpassword = FindViewById<EditText>(Resource.Id.passwordR);
-            _myresgisterB = FindViewById<Button>(Resource.Id.registerbuttonR);
-            _myRfacebook = FindViewById<ImageView>(Resource.Id.facebookIR);
-            _myRgoogle = FindViewById<ImageView>(Resource.Id.googleIR);
+            _myRusername = FindViewById<EditText>(Resource.Id.edittextuserR);
+            _myRemailaddress = FindViewById<EditText>(Resource.Id.edittextemailaddressR);
+            _myRusernameedts = FindViewById<EditText>(Resource.Id.edittextusernameR);
+            _myRpassword = FindViewById<EditText>(Resource.Id.edittextpasswordR);
+            _myresgisterB = FindViewById<Button>(Resource.Id.buttonregisterR);
+            _myRfacebook = FindViewById<ImageView>(Resource.Id.imageviewfacebookR);
+            _myRgoogle = FindViewById<ImageView>(Resource.Id.imageviewgoogleR);
 
             TextPaint paint = _myregister.Paint;
             float width = paint.MeasureText(_myregister.Text);
-
-      
-
-
             int[] vs = new int[] {
-
-
-
 
 
                     Color.ParseColor("#002aba"),
                     Color.ParseColor("#002aba"),
                     Color.ParseColor("#f23ce7"),
-
-
-
 
             };
 

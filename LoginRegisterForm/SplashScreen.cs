@@ -22,7 +22,7 @@ namespace LoginRegisterForm
         {
             base.OnResume();
             SetContentView(Resource.Layout.splashscreenlayout);
-            splashImage = FindViewById<ImageView>(Resource.Id.baskinrobbins);
+            splashImage = FindViewById<ImageView>(Resource.Id.imageviewbaskinrobbins);
             var animation = AnimationUtils.LoadAnimation(this, Resource.Animation.animfadetrans);
             splashImage.StartAnimation(animation);
             await SimulateStratup();

@@ -8,7 +8,7 @@
     <ImageView
         android:layout_width="@dimen/my_baskinssplashsize"
         android:layout_height="@dimen/my_baskinssplashsize"
-        android:id="@+id/baskinrobbins"
+        android:id="@+id/imageviewbaskinrobbins"
         android:src="@drawable/baskinsplash"/>
 
 </LinearLayout>

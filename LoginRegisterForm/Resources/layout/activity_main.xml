@@ -13,7 +13,7 @@
   
 
         <TextView
-            android:id="@+id/textlogin"
+            android:id="@+id/textviewlogin"
             android:text="@string/login"
             android:layout_marginTop="@dimen/my_margintoplogintext"
             android:padding="@dimen/my_paddingtext"
@@ -31,7 +31,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/accountquestiontextL"
+                android:id="@+id/textviewaccountquestionL"
                 android:text="@string/accquestion"
                 android:textSize="@dimen/my_textsize"
                 android:textColor="@color/my_darkgray"
@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"/>
 
             <TextView
-                android:id="@+id/createaccounttextL"
+                android:id="@+id/textviewcreateaccountL"
                 android:text="@string/createaccount"
                 android:layout_marginLeft="@dimen/my_margincatext"
                 android:textSize="@dimen/my_catextsize"
@@ -64,7 +64,7 @@
                 android:imeOptions="actionNext"
                 android:paddingHorizontal="@dimen/my_paddingtext"
                 android:drawablePadding="@dimen/my_drawablepaddingedt"
-                android:id="@+id/usernameedtL"
+                android:id="@+id/edittextusernameL"
                 android:background="@drawable/shape_rectangle"
                 android:hint="@string/username"
                 android:drawableLeft="@drawable/ic_user"/>
@@ -79,7 +79,7 @@
                 android:inputType="textPassword"
                 android:imeOptions="actionDone"
                 android:gravity="center_vertical"
-                android:id="@+id/passwordedtL"
+                android:id="@+id/edittextpasswordL"
                 android:background="@drawable/shape_rectangle"
                 android:hint="@string/password"
                 android:drawableLeft="@drawable/ic_password"/>
@@ -92,7 +92,7 @@
             android:layout_marginTop="@dimen/my_margintopforgotpass"
             android:layout_marginRight="@dimen/my_marginrightforgotpass"
             android:textSize="@dimen/my_catextsize"
-            android:id="@+id/forgotpasstextL"
+            android:id="@+id/textviewforgotpasswordL"
             android:gravity="right"
             android:textColor="@drawable/textselector"/>
 
@@ -105,7 +105,7 @@
             android:textSize="@dimen/my_buttontextsize"
             android:layout_gravity="center"
             android:background="@drawable/buttonshape"
-            android:id="@+id/loginbuttonL"
+            android:id="@+id/buttonloginL"
             android:textColor="@color/my_white"/>
 
         <TextView
@@ -116,7 +116,7 @@
             android:gravity=" center"
             android:textSize="@dimen/my_textsize"
             android:textStyle="bold"
-            android:id="@+id/loginoptionL"
+            android:id="@+id/textloginoptionL"
             android:textColor="@color/my_darkgray"/>
 
 
@@ -132,13 +132,13 @@
             <ImageView
                 android:layout_width="@dimen/my_imageSize"
                 android:layout_height="@dimen/my_imageSize"
-                android:id="@+id/facebookIL"
+                android:id="@+id/imageviewfacebookL"
                 android:src="@drawable/facebook"/>
 
             <ImageView
                 android:layout_width="@dimen/my_imageSize"
                 android:layout_height="@dimen/my_imageSize"
-                android:id="@+id/googleIL"
+                android:id="@+id/imageviewgoogleL"
                 android:layout_marginLeft="@dimen/my_margingLeftImage"
                 android:src="@drawable/google1"/>
 
